@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/04d3678b-9b65-4fc9-bfd2-61ffced5127b/console.sql" dialect="SQLite" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/8abfa990-1e1d-47c6-9d7c-1d8701f5d067/console.sql" dialect="SQLite" />
   </component>
 </project>
