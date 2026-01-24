@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8065cfe8-7bf6-49c4-8bed-f85265463fab" name="Changes" comment="Empresa 2" />
+    <list default="true" id="8065cfe8-7bf6-49c4-8bed-f85265463fab" name="Changes" comment="Empresa 3">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f2047930-1ab5-4b6c-b7e1-1b433325b1dc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f2047930-1ab5-4b6c-b7e1-1b433325b1dc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769251422142</updated>
       <workItem from="1769251423031" duration="231000" />
-      <workItem from="1769251661182" duration="1071000" />
+      <workItem from="1769251661182" duration="6535000" />
     </task>
     <task id="LOCAL-00001" summary="Empresa">
       <option name="closed" value="true" />
@@ -140,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769252608285</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Empresa 3">
+      <option name="closed" value="true" />
+      <created>1769252749239</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1769252749239</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +160,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Empresa" />
     <MESSAGE value="Empresa 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Empresa 2" />
+    <MESSAGE value="Empresa 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Empresa 3" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

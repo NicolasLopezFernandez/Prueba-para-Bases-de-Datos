@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="identifier.sqlite">
+<dataSource name="Practica para examen Extraordinario Bases de Datos 1">
   <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.54">
     <root id="1">
       <ServerVersion>3.51.1</ServerVersion>
@@ -568,7 +568,7 @@
     </routine>
     <schema id="214" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2026-01-24.17:23:11</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2026-01-24.22:07:15</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="215" parent="14">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1806,65 +1806,155 @@
     <argument id="626" parent="213">
       <Position>1</Position>
     </argument>
-    <table id="627" parent="214" name="empleado"/>
-    <table id="628" parent="214" name="sqlite_master">
+    <table id="627" parent="214" name="alumnos"/>
+    <table id="628" parent="214" name="asignaturas"/>
+    <table id="629" parent="214" name="matriculas"/>
+    <table id="630" parent="214" name="profesores"/>
+    <table id="631" parent="214" name="sqlite_master">
       <System>1</System>
     </table>
-    <column id="629" parent="627" name="id_empleado">
+    <check id="632" parent="627">
+      <Predicate>edad &gt;= 18</Predicate>
+    </check>
+    <column id="633" parent="627" name="id_alumno">
       <Position>1</Position>
       <StoredType>INT|0s</StoredType>
     </column>
-    <column id="630" parent="627" name="nombre">
+    <column id="634" parent="627" name="nombre">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>VARCHAR(50)|0s</StoredType>
     </column>
-    <column id="631" parent="627" name="apellido">
+    <column id="635" parent="627" name="apellido">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>VARCHAR(50)|0s</StoredType>
     </column>
-    <column id="632" parent="627" name="fecha_contratacion">
-      <NotNull>1</NotNull>
+    <column id="636" parent="627" name="edad">
       <Position>4</Position>
-      <StoredType>DATE|0s</StoredType>
+      <StoredType>INT|0s</StoredType>
     </column>
-    <column id="633" parent="627" name="salario">
-      <NotNull>1</NotNull>
+    <column id="637" parent="627" name="ciudad">
       <Position>5</Position>
-      <StoredType>DECIMAL(10,2)|0s</StoredType>
-    </column>
-    <column id="634" parent="627" name="departamento">
-      <Position>6</Position>
       <StoredType>VARCHAR(50)|0s</StoredType>
     </column>
-    <index id="635" parent="627" name="sqlite_autoindex_empleado_1">
-      <ColNames>id_empleado</ColNames>
+    <index id="638" parent="627" name="sqlite_autoindex_alumnos_1">
+      <ColNames>id_alumno</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="636" parent="627">
-      <ColNames>id_empleado</ColNames>
+    <key id="639" parent="627">
+      <ColNames>id_alumno</ColNames>
       <Primary>1</Primary>
-      <UnderlyingIndexName>sqlite_autoindex_empleado_1</UnderlyingIndexName>
+      <UnderlyingIndexName>sqlite_autoindex_alumnos_1</UnderlyingIndexName>
     </key>
-    <column id="637" parent="628" name="type">
+    <column id="640" parent="628" name="id_asignatura">
       <Position>1</Position>
-      <StoredType>TEXT|0s</StoredType>
+      <StoredType>INT|0s</StoredType>
     </column>
-    <column id="638" parent="628" name="name">
+    <column id="641" parent="628" name="nombre">
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>TEXT|0s</StoredType>
+      <StoredType>VARCHAR(50)|0s</StoredType>
     </column>
-    <column id="639" parent="628" name="tbl_name">
+    <column id="642" parent="628" name="creditos">
+      <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>TEXT|0s</StoredType>
+      <StoredType>INT|0s</StoredType>
     </column>
-    <column id="640" parent="628" name="rootpage">
+    <column id="643" parent="628" name="id_profesor">
       <Position>4</Position>
       <StoredType>INT|0s</StoredType>
     </column>
-    <column id="641" parent="628" name="sql">
+    <foreign-key id="644" parent="628">
+      <ColNames>id_profesor</ColNames>
+      <RefColNames>id_profesor</RefColNames>
+      <RefTableName>profesores</RefTableName>
+    </foreign-key>
+    <index id="645" parent="628" name="sqlite_autoindex_asignaturas_1">
+      <ColNames>id_asignatura</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="646" parent="628">
+      <ColNames>id_asignatura</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_asignaturas_1</UnderlyingIndexName>
+    </key>
+    <column id="647" parent="629" name="id_alumno">
+      <Position>1</Position>
+      <StoredType>INT|0s</StoredType>
+    </column>
+    <column id="648" parent="629" name="id_asignatura">
+      <Position>2</Position>
+      <StoredType>INT|0s</StoredType>
+    </column>
+    <column id="649" parent="629" name="nota">
+      <Position>3</Position>
+      <StoredType>DECIMAL(4,2)|0s</StoredType>
+    </column>
+    <foreign-key id="650" parent="629">
+      <ColNames>id_alumno</ColNames>
+      <RefColNames>id_alumno</RefColNames>
+      <RefTableName>alumnos</RefTableName>
+    </foreign-key>
+    <foreign-key id="651" parent="629">
+      <ColNames>id_asignatura</ColNames>
+      <RefColNames>id_asignatura</RefColNames>
+      <RefTableName>asignaturas</RefTableName>
+    </foreign-key>
+    <index id="652" parent="629" name="sqlite_autoindex_matriculas_1">
+      <ColNames>id_alumno
+id_asignatura</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="653" parent="629">
+      <ColNames>id_alumno
+id_asignatura</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_matriculas_1</UnderlyingIndexName>
+    </key>
+    <column id="654" parent="630" name="id_profesor">
+      <Position>1</Position>
+      <StoredType>INT|0s</StoredType>
+    </column>
+    <column id="655" parent="630" name="nombre">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>VARCHAR(50)|0s</StoredType>
+    </column>
+    <column id="656" parent="630" name="departamento">
+      <Position>3</Position>
+      <StoredType>VARCHAR(50)|0s</StoredType>
+    </column>
+    <index id="657" parent="630" name="sqlite_autoindex_profesores_1">
+      <ColNames>id_profesor</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="658" parent="630">
+      <ColNames>id_profesor</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_profesores_1</UnderlyingIndexName>
+    </key>
+    <column id="659" parent="631" name="type">
+      <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="660" parent="631" name="name">
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="661" parent="631" name="tbl_name">
+      <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="662" parent="631" name="rootpage">
+      <Position>4</Position>
+      <StoredType>INT|0s</StoredType>
+    </column>
+    <column id="663" parent="631" name="sql">
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
