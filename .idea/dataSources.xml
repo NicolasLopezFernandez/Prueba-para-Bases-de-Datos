@@ -15,5 +15,12 @@
       <jdbc-url>jdbc:sqlite:Practica para examen Extraordinario Bases de Datos 1</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="chinook.db" uuid="141d30a4-be8a-4533-993f-0ad3691b025a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$USER_HOME$/Downloads/chinook/chinook.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
